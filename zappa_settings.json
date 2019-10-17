@@ -1,0 +1,15 @@
+{
+    "sandbox": {
+        "lambda_handler": "index.lambda_handler",
+        "events": [{
+            "function": "index.lambda_handler",
+            "expression": "rate(1 minute)"
+        }],
+        "project_name": "zappa_test",
+        "runtime": "python3.7",
+        "s3_bucket": "s3bucket_name",
+        "apigateway_enabled": false,
+        "attach_policy": "iam/lambda_attach_policy.json",
+        "keep_warm": false
+    }
+}

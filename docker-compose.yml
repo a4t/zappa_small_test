@@ -1,0 +1,12 @@
+version: "3"
+services:
+  zappa:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        python_version: 3.7.4-alpine3.10
+    volumes:
+      - ./:/zappa
+    env_file:
+      - config/aws.env
