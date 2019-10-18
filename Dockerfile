@@ -9,5 +9,5 @@ WORKDIR /zappa
 ADD ./Pipfile /zappa/Pipfile
 ADD ./Pipfile.lock /zappa/Pipfile.lock
 
-RUN pipenv install --system
+RUN pipenv install --dev
 ENTRYPOINT ["pipenv", "run", "zappa"]
